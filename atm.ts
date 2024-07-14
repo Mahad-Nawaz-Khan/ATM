@@ -70,7 +70,7 @@ async function deposit() {
             name: 'amount',
             message: 'How much would you like to deposit?',
             prefix: chalk.blueBright('\n$'),
-            validate: (input) => isNaN(Number(input)) ? "Please enter a valid number." : true
+            validate: (input) => isNaN(Number(input)) ? chalk.red("Please enter a valid number.") : true
         }
     );
 
@@ -131,13 +131,13 @@ async function handleUserActions(): Promise<void> {
                 await promptAgain();
                 break;
 
-            case chalk.greenBright('Withdraw'):
+            case 'Withdraw':
 
                 await withdraw();
                 await promptAgain();
                 break;
 
-            case chalk.greenBright('Exit'):
+            case 'Exit':
 
                 await exitProgram();
                 break;
