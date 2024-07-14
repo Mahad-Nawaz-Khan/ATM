@@ -1,6 +1,6 @@
 {
-  "name": "atm",
-  "version": "1.0.0",
+  "name": "cli-atm-mnk",
+  "version": "1.0.2",
   "main": "index.js",
   "type": "module",
   "bin": {
